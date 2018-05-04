@@ -7,33 +7,33 @@ public class Main {
 
     public static void main(String[] args) {
 
-        pares (1);
-        primos(1);
+        System.out.println(Arrays.toString(pares(5)));
+        System.out.println(Arrays.toString(fibonacci(1)));
+        System.out.println(Arrays.toString(primos(1)));
     }
 
-    public static void pares(int n) {
+    public static int[] pares(int n) {
+        int[] numerosPares= new int[n];
         for (int i = 1; i <= n; i++) {
-            System.out.print(i * 2 + " ");
+            numerosPares[i-1]=i*2;
         }
-        System.out.println();
+        return numerosPares;
     }
 
-    public static void fibonacci(int n) {
-        int[] m = new int[n];
-
-        m[0] = 0;
+    public static int[] fibonacci(int n) {
+        int[] secuenciaFibo = new int[n];
+        secuenciaFibo[0] = 0;
         if(n>1){
-            m[1] = 1;
+            secuenciaFibo[1] = 1;
             for (int i = 2; i < n; i++) {
-                m[i] = m[i - 2] + m[i - 1];
+                secuenciaFibo[i] = secuenciaFibo[i - 2] + secuenciaFibo[i - 1];
             }
         }
-        System.out.print(Arrays.toString(m));
-
-        System.out.println();
+        return  secuenciaFibo;
     }
 
-    public static void primos(int n) {
+    public static int[] primos(int n) {
+        int[] numerosPrimos= new int[n];
         int i=2;
         int cont=0;
         while (cont<n){
@@ -44,12 +44,11 @@ public class Main {
                 }
             }
             if(primo) {
-                System.out.print(i+"  " );
+                numerosPrimos[cont]=i;
                 cont++;
             }
             i++;
         }
-
-        System.out.println();
+        return  numerosPrimos;
     }
 }
