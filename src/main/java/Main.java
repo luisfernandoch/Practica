@@ -6,10 +6,9 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-
-        System.out.println(Arrays.toString(pares(5)));
-        System.out.println(Arrays.toString(fibonacci(1)));
-        System.out.println(Arrays.toString(primos(1)));
+        System.out.println(Arrays.toString(pares(1)));
+        //ystem.out.println(Arrays.toString(fibonacci(1)));
+        //System.out.println(Arrays.toString(primos(1)));
     }
 
     public static int[] pares(int n) {
